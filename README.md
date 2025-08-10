@@ -19,7 +19,7 @@ Objetivo: practicar **enumeración, explotación, escalada de privilegios y pivo
   - `192.168.1.0/24` (red local de trabajo)
 - Servicios identificados: SSH (22), SMTP (25), HTTP (80), SMB (139/445).
 
-![Descubrimiento de IPs](./entorno-ejptv2/images/Pasted%20image%2020250428092257.png)
+![Descubrimiento de IPs](./images/Pasted%20image%2020250428092257.png)
 
 **Explotación:**
 - Enumeración SMB con `smbclient`, `smbmap`, `crackmapexec` y `enum4linux` → carpeta *anonymous* con credenciales.
@@ -38,7 +38,7 @@ Objetivo: practicar **enumeración, explotación, escalada de privilegios y pivo
 - `nikto` detecta panel de login vulnerable.
 - SQLi (`' OR 1=1 -- -`) → acceso como admin.
 
-![Login bypass](./entorno-ejptv2/images/Pasted%20image%2020250501124110.png)
+![Login bypass](./images/Pasted%20image%2020250501124110.png)
 
 **Explotación:**
 - Vulnerabilidad de subida de archivos en campo avatar → payload PHP reverso desde [revshells.com](https://revshells.com).
@@ -58,7 +58,7 @@ Objetivo: practicar **enumeración, explotación, escalada de privilegios y pivo
 **Explotación:**
 - Uso de `metasploit` para ejecutar ambos exploits → sesión `meterpreter` como SYSTEM.
 
-![Meterpreter Windows](./entorno-ejptv2/images/Pasted%20image%2020250503230004.png)
+![Meterpreter Windows](./images/Pasted%20image%2020250503230004.png)
 
 ---
 
@@ -72,7 +72,7 @@ Objetivo: practicar **enumeración, explotación, escalada de privilegios y pivo
 - Subida de `reverse.aspx` al directorio web → shell reversa.
 - Transferencia de payload `.exe` con `certutil` y ejecución vía `multi/handler` en `metasploit`.
 
-![Reverse Shell IIS](./entorno-ejptv2/images/Pasted%20image%2020250504090917.png)
+![Reverse Shell IIS](./images/Pasted%20image%2020250504090917.png)
 
 ---
 
@@ -90,7 +90,7 @@ Objetivo: practicar **enumeración, explotación, escalada de privilegios y pivo
 - Configuración de `autoroute` y `portfwd` en `metasploit` para alcanzar última máquina.
 - Acceso final a root vía SSH tras redireccionamiento de puertos.
 
-![Pivoting Metasploit](./entorno-ejptv2/images/Pasted%20image%2020250515101533.png)
+![Pivoting Metasploit](./images/Pasted%20image%2020250515101533.png)
 
 ---
 
